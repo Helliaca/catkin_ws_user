@@ -26,18 +26,18 @@ def callbackBackwardLongitudinal(request):
         return ParkingManeuverResponse(
             "ERROR: Request can only be 'left' or 'right'")
 
-    driving_direction_pub1.publish(0.30)
+    driving_direction_pub1.publish(0.45)
 
 #     rospy.sleep(10)
 #     pub_back.publish(0.10)
 
-    rospy.sleep(10)
-    driving_direction_pub2.publish(0.30)
+    rospy.sleep(3)
+    driving_direction_pub2.publish(0.65)
 
-    rospy.sleep(10)
-    pub_forward.publish(0.1)
+    rospy.sleep(4)
+    pub_forward.publish(0.18)
 
-    rospy.sleep(10)
+    rospy.sleep(4)
     return ParkingManeuverResponse("FINISHED")
 
 
